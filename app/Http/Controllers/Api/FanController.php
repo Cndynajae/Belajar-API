@@ -103,7 +103,7 @@ class FanController extends Controller
             $fan = new Fan();
             $fan->nama_fan = $request->nama_fan;
             $fan->save();
- 
+
             $fan->klub()->sync($request->klub);
 
             return response()->json([
